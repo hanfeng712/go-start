@@ -21,6 +21,8 @@
     ｜—— middleware 中间件
     ｜—— service 视图层
 ｜——  pkg 存放第三方工具
+    ｜—— libs 封装依赖库
+    ｜—— utils 工具类
 ｜——  README 工程说明文件
 ｜——  Dockerfile
 ｜—— .gitignore git的忽略文件
