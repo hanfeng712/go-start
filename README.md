@@ -15,11 +15,12 @@
     ｜——  apigateway 路由配置
 ｜——  doc 设计文件路径
 ｜——  migration 迁移文件路径
-｜——  pkg 代码工程目录
+｜——  internal 代码工程目录
     ｜—— core 领域驱动层
     ｜—— handler 视图层
     ｜—— middleware 中间件
     ｜—— service 视图层
+｜——  pkg 存放第三方工具
 ｜——  README 工程说明文件
 ｜——  Dockerfile
 ｜—— .gitignore git的忽略文件

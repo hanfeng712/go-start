@@ -3,7 +3,7 @@ package apigateway
 import (
 	"gtstart/config"
 	"gtstart/design/gen/types"
-	"gtstart/pkg/handler"
+	"gtstart/internal/handler"
 	"net/http"
 
 	"github.com/zeromicro/go-zero/core/logx"
