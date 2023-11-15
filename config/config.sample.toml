@@ -1,0 +1,38 @@
+# httpServer配置
+Host = "0.0.0.0"
+Port = 8888
+Verbose = true #是否打印详细日志
+MaxConns = 10000 #并发请求数
+Timeout = 3000 #超时时间
+
+#服务配置
+Name = "sample" # 服务名称
+Mode = "dev" # 服务模式,dev｜test｜rt｜pre｜pro
+
+[JWT]
+Secret="12j38353545423"
+ExpireIn = 86400
+
+[Middlewares]
+Trace = true # 是否启用链路追踪中间件
+Log = true # 日志配置
+Prometheus = true # 是否启用普罗米修斯指标中间件
+MaxConns = true # 是否启用限流中间件
+Breaker = true # 是否启用熔断中间件
+Shedding = true # 是否启用负载监控中间件
+Timeout = true # 是否启用超时中间件
+Recover = true # 是否启用 panic 恢复中间件
+Metrics = true # 是否启用指标统计中间件
+MaxBytes = true # 是否启用 ContentLength 管理中间件
+Gunzip = true # 是否启用压缩管理中间件
+
+[Prometheus]
+Host = "127.0.0.1" # 监听地址
+Port = 9901 # 监听端口
+Path = "/service/" # 监听的路径
+
+[Log]
+Mode="console" # 日志打印模式,file｜console
+Level="debug"  # 日志输出级别,debug|info|error|severe
+Encoding="json" # 日志格式, json 格式 或者 plain 纯文本
+Path="logs" # 日志在文件输出模式下，日志输出路径

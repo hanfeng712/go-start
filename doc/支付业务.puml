@@ -1,0 +1,29 @@
+
+'序列图-体现业务关系'
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+用户 -> 网关: 获取微信预支付包接口
+网关 -[#red]> 网关 : 限流
+网关 -> 支付业务: 透传请求
+支付业务 -> 订单中心: 根据订单id，获取订单信息
+订单中心 --> 支付业务: 返回订单结果信息
+支付业务 -[#red]> 支付业务 : 判断订单信息是否正常
+支付业务 -> 微信平台: 获取微信预支付信息
+微信平台 --> 支付业务: 返回预支付包信息
+支付业务 -[#red]> 支付业务: 判断微信支付宝信息
+支付业务 --> 网关: 请求相应结果
+网关 --> 用户: 相应结果
+@enduml
+
+'活动图-与代码实现逻辑保持一致'
+@startuml
+start
+if (condition?) is (yes) then
+  :true;
+else (no)
+  :false;
+endif
+end
+@enduml
