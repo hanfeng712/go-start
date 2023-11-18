@@ -9,7 +9,7 @@ Timeout = 3000 #超时时间
 Name = "sample" # 服务名称
 Mode = "dev" # 服务模式,dev｜test｜rt｜pre｜pro
 
-[JWT]
+[Jwt]
 Secret="12j38353545423"
 ExpireIn = 86400
 

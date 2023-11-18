@@ -1,6 +1,7 @@
 package apigateway
 
 import (
+	"fmt"
 	"gtstart/config"
 	"gtstart/design/gen/types"
 	"gtstart/internal/handler"
@@ -12,6 +13,8 @@ import (
 )
 
 func RegisterHandlers(server *rest.Server) {
+	fmt.Println("==========")
+	fmt.Println(config.C.Jwt)
 	// 需要jwt认证的
 	server.AddRoutes(
 		[]rest.Route{

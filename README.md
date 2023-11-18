@@ -47,8 +47,21 @@
 ```
 * 数据库迁移命令
 ```azure
-
+创建sql维护文件
+migrate create -ext sql -dir migrations create_integral_table
+迁移sql到数据库
+migrate -path migrations -database "mysql://{用户名}:{密码}@{ip}:5432/{数据库}?charset=utf8mb4&parseTime=True&loc=Local" up
+回退sql
+migrate -path migrations -database "mysql://{用户名}:{密码}@{ip}:5432/{数据库}?charset=utf8mb4&parseTime=True&loc=Local" down
 ```
+
+启动命令:
+```
+在command目录下
+go build
+./command serve --config ../config/config.sample.toml
+```
+
 * go-zero常用命令
 1. api生成
 ```

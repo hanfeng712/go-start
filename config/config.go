@@ -13,12 +13,12 @@ func ParseConfig(filePath string) {
 
 type Config struct {
 	rest.RestConf
-	Jwt JwtConfig `toml:"Jwt" yaml:"jwt,omitempty"`
+	Jwt JwtConfig
 }
 
 type JwtConfig struct {
-	Secret        string `toml:"Secret" yaml:"Secret,omitempty"`
-	RSAPrivateKey string `toml:"RSAPrivateKey" yaml:"RSAPrivateKey,omitempty"`
-	RSAPublicKey  string `toml:"RSAPublicKey" yaml:"RSAPublicKey,omitempty"`
-	ExpireIn      int    `toml:"ExpireIn" yaml:"ExpireIn,omitempty" default:"86400"`
+	Secret        string `json:"Secret" yaml:"Secret,omitempty"`
+	RSAPrivateKey string `json:"RSAPrivateKey" yaml:"RSAPrivateKey,omitempty"`
+	RSAPublicKey  string `json:"RSAPublicKey" yaml:"RSAPublicKey,omitempty"`
+	ExpireIn      int    `json:"ExpireIn" yaml:"ExpireIn,omitempty" default:"86400"`
 }
