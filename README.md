@@ -48,12 +48,12 @@
 * 数据库迁移命令
 ```azure
 创建sql维护文件
-migrate create -ext sql -dir migrations create_integral_table
+migrate create -ext sql -dir migrations init_table
 迁移sql到数据库
 migrate -path migrations -database "mysql://{用户名}:{密码}@({ip}:3306)/{数据库}?charset=utf8mb4&parseTime=True&loc=Local" up
 回退sql
 migrate -path migrations -database "mysql://{用户名}:{密码}@({ip}:3306)/{数据库}?charset=utf8mb4&parseTime=True&loc=Local" down
-```
+```s
 
 启动命令:
 ```
