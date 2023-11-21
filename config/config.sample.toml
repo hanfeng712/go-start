@@ -12,6 +12,8 @@ Mode = "dev" # 服务模式,dev｜test｜rt｜pre｜pro
 [Jwt]
 Secret="12j38353545423"
 ExpireIn = 86400
+RSAPrivateKey = ""
+RSAPublicKey = ""
 
 [Middlewares]
 Trace = true # 是否启用链路追踪中间件
